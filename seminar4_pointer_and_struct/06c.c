@@ -1,6 +1,16 @@
+#include <stdio.h>
+
 int exchange(int* pa, int b)
 {
     int old = *pa;
     *pa = b;
     return old;
+}
+
+int main(void)
+{
+    int a = 10;
+    printf("%i\n", exchange(&a, 20));  // 10
+    printf("%i\n", a);                 // 20
+    return 0;
 }
